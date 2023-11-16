@@ -341,6 +341,7 @@ body {
 
 .sucsess {
   background-color: rgba(57, 12, 163, 0.5960784314);
+  border-radius: 1rem;
   color: white;
   outline: 1px black solid;
   cursor: pointer !important;
