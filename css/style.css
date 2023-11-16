@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  /* Browsers have different default form fonts */
+  font-size: 13px;
+  font-family: Arial;
+}
+
+/* Remove the stupid outer glow in Webkit */
+input:focus {
+  outline: 0;
+}
+
+/* Box Sizing Reset
+-----------------------------------------------*/
+/* All of our custom controls should be what we expect them to be */
+input,
+textarea {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Text Inputs
+-----------------------------------------------*/
+/* Button Controls
+-----------------------------------------------*/
+input[type=checkbox],
+input[type=radio] {
+  width: 13px;
+  height: 13px;
+}
+
+/* File Uploads
+-----------------------------------------------*/
+/* Search Input
+-----------------------------------------------*/
+/* Make webkit render the search input like a normal text field */
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none;
+}
+
+/* Buttons
+-----------------------------------------------*/
+button,
+input[type=reset],
+input[type=button],
+input[type=submit] {
+  /* Fix IE7 display bug */
+  overflow: visible;
+  width: auto;
+}
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* Textarea
+-----------------------------------------------*/
+textarea {
+  /* Move the label to the top */
+  vertical-align: top;
+  /* Turn off scroll bars in IE unless needed */
+  overflow: auto;
+}
+
+/* Selects
+-----------------------------------------------*/
+select[multiple] {
+  /* Move the label to the top */
+  vertical-align: top;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* __________________ */
+* {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(315deg, rgb(101, 0, 94) 3%, rgb(60, 132, 206) 38%, rgb(48, 238, 226) 68%, rgb(255, 25, 25) 98%);
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+  background-color: rgba(126, 126, 126, 0.2745098039);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 2rem;
+  color: white;
+}
+.form h3 {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.form h3::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #3a0ca3;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+}
+.form h3:hover::after {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+}
+.form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
+}
+.form .label-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.form .label-form p {
+  margin: 0;
+  font-size: 0.6rem;
+  padding: 0 10px;
+}
+.form .label-form::after {
+  content: "Try again";
+  position: absolute;
+  bottom: -5px;
+  right: 10px;
+  color: transparent;
+  background-color: transparent;
+  padding: 5px 10px;
+  -webkit-transform: translateY(25%);
+      -ms-transform: translateY(25%);
+          transform: translateY(25%);
+  border-radius: 1rem;
+  font-size: 0.6rem;
+}
+.form .form-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid #fff;
+  color: white;
+  padding: 5px;
+  border-radius: 0.5rem;
+}
+.form .form-input::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+.form .form-input::-moz-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+.form .form-input:-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+.form .form-input::-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+.form .form-input::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+.form .form-input:focus {
+  background-color: rgba(142, 197, 252, 0.2980392157);
+  background-image: linear-gradient(62deg, rgba(142, 197, 252, 0.2117647059) 0%, rgba(224, 195, 252, 0.2431372549) 100%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.form .form-btn {
+  cursor: not-allowed;
+}
+
+.label-form.fail input {
+  border: 1px solid rgba(255, 0, 0, 0.498) !important;
+  color: black;
+}
+.label-form.fail::after {
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.4941176471);
+  padding: 3px 6px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.sucsess {
+  background-color: rgba(57, 12, 163, 0.5960784314);
+  color: white;
+  outline: 1px black solid;
+  cursor: pointer !important;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.wave {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  -webkit-animation: wave 10s -3s linear infinite;
+          animation: wave 10s -3s linear infinite;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@-webkit-keyframes wave {
+  2% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+  25% {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  50% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  75% {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  100% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+}
+
+@keyframes wave {
+  2% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+  25% {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  50% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  75% {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  100% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+}/*# sourceMappingURL=style.css.map */
